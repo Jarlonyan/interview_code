@@ -13,18 +13,18 @@ void print_vec(vector<int>& a) {
 
 void insert_sort(vector<int>& a) {
     int n = a.size();
-    for(int i = n-1; i >= 0; --i) {
-        int temp = a[i];
-        int j = i - 1;
-        while(j >= 0 && a[i] < a[j]) {
-            a[j+1] = a[j];
-            --j;
+    for(int i = 1; i < n; ++i) {
+        int temp = a[i], j;
+        for(j = i-1; j >= 0; --j) {
+            if(temp < a[j])
+                a[j+1] = a[j];
+            else
+                break;
         }
         a[j+1] = temp;
         print_vec(a);
     }
 }
-
 
 int main() {
     vector<int> a = {8, 1, 9, 3, 7, 6};
