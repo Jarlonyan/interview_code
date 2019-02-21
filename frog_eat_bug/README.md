@@ -21,3 +21,24 @@ tencent 面试题:
 
 用深度优先搜索算法
 
++ 调用说明
+
+
+```c++
+    int dfs_solve(vector<int>& a, int depth, vector<int>& que,  int v, int& res);
+    dfs_solve(a, 0, que, -1, res);
+```
+
+`a`: 数组a[m]=[1,8,2,9,6]，数组是从0开始，青蛙刚开始在台阶外，所以青蛙初始位置是-1
+
+`depth`: 深度，刚开始是0
+
+`que`: 存储
+
+`v`: 目前的节点
+
+`res`: 保存计算结果
+
+
+
+
