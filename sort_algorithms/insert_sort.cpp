@@ -11,6 +11,7 @@ void print_vec(vector<int>& a) {
     cout << endl;
 }
 
+//挨个遍历元素，将其插入其左边有序数组中
 void insert_sort(vector<int>& a) {
     int n = a.size();
     for(int i = 1; i < n; ++i) {
