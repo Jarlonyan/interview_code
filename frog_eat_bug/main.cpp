@@ -8,24 +8,23 @@
 #include <algorithm>
 using namespace std;
 
-int print_vec(vector<int>& b, vector<int>& a, int depth) {
+int print_vec(vector<int>& a, vector<int>& que, int depth) {
     int sum = 0;
-    for (int i = 0; i < a.size() && i<depth ; i++) {
-        cout << a[i] << ", ";
-        sum += b[a[i]];
+    for (int i = 0; i < que.size() && i < depth; ++i) {
+        cout << que[i] << ", ";
+        sum += a[que[i]];
     }
     return sum;
 }
 
 int dfs_solve(vector<int>& a, int depth, vector<int>& que,  int v, int& res) {
-    if (v >= a.size()-1 || depth>=3) { //深度为n=3, 青蛙最多跳n次
+    if (v >= int(a.size()-1) || depth >= 3) { //深度为n=3, 青蛙最多跳n次
         int sum = print_vec(a, que, depth);
         res = max(sum, res);
-        cout << ", res=" << res << endl;
+        cout << " sum=" << sum << endl;
         return 0;
     }
-
-    for(int i=1; i<=2; i++) {
+    for(int i = 1; i <= 2; ++i) {
         int w = v + i;
         if (w < a.size()) {
             que.push_back(w);
@@ -33,17 +32,15 @@ int dfs_solve(vector<int>& a, int depth, vector<int>& que,  int v, int& res) {
             que.pop_back();
         }
     }
-    
+
     return 0;
 }
 
 
 int main() {
-    int m = 5;
-    vector<int> a={8, 1, 9, 6, 3}, que;
-    que.push_back(0);
-    int res = 8;
-    dfs_solve(a, 1, que, 0, res);
+    vector<int> a={1, 8, 2, 9, 6}, que;
+    int res = 0;
+    dfs_solve(a, 0, que, -1, res);
     cout << "res=" << res << endl;
     return 0;
 }
