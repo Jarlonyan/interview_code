@@ -3,7 +3,12 @@
 #include <iostream>
 using namespace std;
 
-void bubble_sort(vector<int>& a) {
+int partition(vector<int>& a, int low, int high) {
+
+    
+}
+
+void quick_sort(vector<int>& a) {
     
 }
 
