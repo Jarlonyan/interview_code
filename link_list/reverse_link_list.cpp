@@ -25,13 +25,13 @@ LinkNode* reverse_link_list(LinkNode* head) {
     if(head == NULL || head->next == NULL) {
         return head;
     }
-    LinkNode* left = head, *right = head->next;
-    left->next = NULL;
-    while(right != NULL) {
-        LinkNode* temp = right;
-        right = right->next;
-        temp->next = left;
-        left = temp;
+    LinkNode* pre = head, *p = head->next;
+    pre->next = NULL;
+    while(p != NULL) {
+        LinkNode* temp = p;
+        p = p->next;
+        temp->next = pre;
+        pre = temp;
     }
     return left;
 }
