@@ -33,7 +33,7 @@ LinkNode* reverse_link_list(LinkNode* head) {
         temp->next = pre;
         pre = temp;
     }
-    return left;
+    return pre;
 }
 
 int main() {

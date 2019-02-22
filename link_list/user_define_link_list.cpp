@@ -58,7 +58,10 @@ class LinkList{
             }
         }
     }
-    
+   
+    Node* reverse_link_list(){
+       
+    }
 };
 
 
