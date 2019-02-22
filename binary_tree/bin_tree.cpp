@@ -24,27 +24,20 @@ struct TreeNode{
    加上结果的空间O(n)，额外空间是O(logn)，总体是O(n)。
 */
 
-TreeNode* sort_array_2_BST(vector<int>& a) {
-    int n = a.size();
-    if(n == 0) {
-        return NULL;
-    }
-    return helper(a, 0, n-1);
-}
-
-TreeNode* helper(vector<int>& a, int left, int right) {
+TreeNode* sort_array_2_BST(vector<int>& a, int left, int right) {
     if(left > right) {
         return NULL;
     }
     int mid = (left+right)/2;
     TreeNode* root = new TreeNode(a[mid]);
-    root.left = helper(a, left, mid-1);
-    root.right = helper(a, a, mid+1, r);
+    root->left = helper(a, left, mid-1);
+    root->right = helper(a, mid+1, right);
     return root;
 }
 
-
 int main() {
+    vector<int> a = {1, 3, 5, 7, 8, 9};
+    
     return 0;
 }
 
