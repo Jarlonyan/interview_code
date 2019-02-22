@@ -29,7 +29,7 @@ int dfs_solve(vector<int>& a, int depth, vector<int>& que,  int v, int& res) {
         return 0;
     }
 
-    for(int i = 1; i <= k; ++i) {
+    for(int i = 1; i <= k; ++i) { // 当前节点是v，邻居节点是从v跳1,2,...,k步
         int w = v + i;
         if (w < a.size()) {
             que.push_back(w);

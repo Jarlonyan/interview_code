@@ -10,7 +10,7 @@ struct LinkNode{
     LinkNode* next;
 };
 
-LinkNode* reverse_link_list_recursive(LinkNode* head){
+LinkNode* reverse_link_list_recursive(LinkNode* head) {
     if(head == NULL || head->next == NULL) {
         return head;
     }
@@ -20,6 +20,21 @@ LinkNode* reverse_link_list_recursive(LinkNode* head){
     return new_head;
 }
 
+
+LinkNode* reverse_link_list(LinkNode* head) {
+    if(head == NULL || head->next == NULL) {
+        return head;
+    }
+    LinkNode* left = head, *right = head->next;
+    left->next = NULL;
+    while(right != NULL) {
+        LinkNode* temp = right;
+        right = right->next;
+        temp->next = left;
+        left = temp;
+    }
+    return left;
+}
 
 int main() {
     

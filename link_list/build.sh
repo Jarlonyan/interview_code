@@ -1,2 +1,7 @@
-g++ -std=c++11  -I./ main.cpp -g -o frog_eat_bug
+
+
+g++ -std=c++11  -I./ reverse_link_list.cpp -o link_list
+
+g++ -std=c++11  -I./ user_define_link_list.cpp -o link_list
+
 
