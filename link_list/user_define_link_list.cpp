@@ -59,8 +59,9 @@ class LinkList{
         }
     }
    
-    Node* reverse_link_list(){
-       
+    Node* reverse_link_list(){  //反转
+        Node<T>* p=head;
+         
     }
 };
 
