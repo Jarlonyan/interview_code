@@ -36,24 +36,24 @@ void quick_sort(vector<int>& a, int low, int high) {
 }
 
 void quick_sort_not_recur(vector<int>& a) {
-    stack<pair<int,int>> st;
+    stack<pair<int,int>> st; //st用于保存待排序的起始、终止位置
     int low = 0, high = a.size() - 1;
-    do{
-        int mid = partition(a, low, high);
-        print_vec(a);
+    st.push({low, high});
 
-        if(low < mid-1)
-            st.push({low, high-1});
-        if(mid+1 < high)
-            st.push({mid+1, high});
-        
+    while(!st.empty()) {
         pair<int,int> x = st.top();
         st.pop();
         low = x.first;
         high = x.second;
-        if(st.empty()) //保证栈中最后一个元素也要经过partition操作
-            partition(a, low, high); 
-    } while(!st.empty());
+        
+        int mid = partition(a, low, high);
+        if(low < mid-1)
+            st.push({low, mid-1});
+        if(mid+1 < high)
+            st.push({mid+1, high});
+       
+        print_vec(a);
+    }
 }
 
 int main () {
