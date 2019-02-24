@@ -8,6 +8,13 @@
 #include <algorithm>
 using namespace std;
 
+/*
+* m个台阶，第i个台阶上有a[i]个虫子
+* 青蛙每次最多跳k个台阶
+* 青蛙最多跳n次
+* 问题：青蛙最多能吃到多少个虫子
+*/
+
 vector<int> a = {1, 8, 2, 9, 6}; //m个台阶，第i个台阶上有a[i]个虫子
 int k = 2; //青蛙每次最多跳k个台阶
 int n = 3; //青蛙最多跳n次
