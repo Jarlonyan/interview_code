@@ -26,6 +26,7 @@ int partition(vector<int>& a, int low, int high) {
     return low;
 }
 
+// 1. 快排递归
 void quick_sort(vector<int>& a, int low, int high) {
    if(low < high) {
         int mid = partition(a, low, high);
@@ -35,6 +36,7 @@ void quick_sort(vector<int>& a, int low, int high) {
    } 
 }
 
+// 2. 快排非递归
 void quick_sort_not_recur(vector<int>& a) {
     stack<pair<int,int>> st; //st用于保存待排序的起始、终止位置
     int low = 0, high = a.size() - 1;
