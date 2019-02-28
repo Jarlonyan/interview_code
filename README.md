@@ -6,14 +6,11 @@
 
 + 1.1. link_list 链表相关
 
-<center>
-
 |题目| 链接 |
 |--|--|
 | 链表的反转（递归、非递归）| [reverse_link_list](https://github.com/Jarlonyan/interview_code/blob/master/link_list/reverse_link_list.cpp) |
 | 用户自定义链表 | [user_define_link_list](https://github.com/Jarlonyan/interview_code/blob/master/link_list/user_define_link_list.cpp) |
 
-</center >
 
 + 1.2. sort_algorithms
 
@@ -26,6 +23,7 @@
 | 选择 | [select_sort](https://github.com/Jarlonyan/interview_code/blob/master/sort_algorithms/select_sort.cpp) |
 | 合并 | [merge_sort](https://github.com/Jarlonyan/interview_code/blob/master/sort_algorithms/merge_sort.cpp) |
 | 快速 | [merge_sort](https://github.com/Jarlonyan/interview_code/blob/master/sort_algorithms/quick_sort.cpp) |
+| 堆排序 | [merge_sort](https://github.com/Jarlonyan/interview_code/blob/master/sort_algorithms/heap_sort.cpp) |
 
 
 + 1.3. binary_tree 二叉树
