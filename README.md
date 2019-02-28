@@ -4,7 +4,7 @@
 
 # 1. 初级代码
 
-+ 1.1. link_list 链表相关
+## 1.1. link_list 链表相关
 
 |题目| 链接 |
 |--|--|
@@ -12,7 +12,7 @@
 | 用户自定义链表 | [user_define_link_list](https://github.com/Jarlonyan/interview_code/blob/master/link_list/user_define_link_list.cpp) |
 
 
-+ 1.2. sort_algorithms
+## 1.2. sort_algorithms
 
 6个排序算法。冒泡、插入、选择、合并、快速、堆排序
 
@@ -26,7 +26,9 @@
 | 堆排序 | [heap_sort](https://github.com/Jarlonyan/interview_code/blob/master/sort_algorithms/heap_sort.cpp) |
 
 
-+ 1.3. binary_tree 二叉树
+## 1.3. binary_tree 二叉树
+
+二叉树的很多题，本质上都是考察遍历算法
 
 |题目| 链接 |
 |--|--|
@@ -40,18 +42,18 @@
 
 # 2. 中级代码 
 
-+ 2.1. dynamic_programming
+## 2.1. dynamic_programming
 
 动态规划
 
-+ 2.2. leetcode
+## 2.2. leetcode
 
 leetcode上的题目
 
 
 # 3. 公司面试题
 
-+ tencent
+## tencent
 |||
 
 
