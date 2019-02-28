@@ -14,7 +14,7 @@
 
 + 1.2. sort_algorithms
 
-6个排序算法。冒泡、插入、选择、合并、快速
+6个排序算法。冒泡、插入、选择、合并、快速、堆排序
 
 |题目| 链接 |
 |--|--|
@@ -22,8 +22,8 @@
 | 插入 | [insert_sort](https://github.com/Jarlonyan/interview_code/blob/master/sort_algorithms/insert_sort.cpp) |
 | 选择 | [select_sort](https://github.com/Jarlonyan/interview_code/blob/master/sort_algorithms/select_sort.cpp) |
 | 合并 | [merge_sort](https://github.com/Jarlonyan/interview_code/blob/master/sort_algorithms/merge_sort.cpp) |
-| 快速 | [merge_sort](https://github.com/Jarlonyan/interview_code/blob/master/sort_algorithms/quick_sort.cpp) |
-| 堆排序 | [merge_sort](https://github.com/Jarlonyan/interview_code/blob/master/sort_algorithms/heap_sort.cpp) |
+| 快速 | [quick_sort](https://github.com/Jarlonyan/interview_code/blob/master/sort_algorithms/quick_sort.cpp) |
+| 堆排序 | [heap_sort](https://github.com/Jarlonyan/interview_code/blob/master/sort_algorithms/heap_sort.cpp) |
 
 
 + 1.3. binary_tree 二叉树
