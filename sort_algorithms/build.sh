@@ -7,6 +7,8 @@
 
 #g++ -std=c++11 -I ./  quick_sort.cpp  -o sort
 
-g++ -std=c++11 -I ./  merge_sort.cpp  -o sort
+#g++ -std=c++11 -I ./  merge_sort.cpp  -o sort
+
+g++ -std=c++11 -I ./  heap_sort.cpp  -o sort
 
 
