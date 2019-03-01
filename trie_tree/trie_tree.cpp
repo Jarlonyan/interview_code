@@ -12,6 +12,7 @@
 #include <algorithm>
 using namespace std;
 
+// 字典树
 struct TrieNode{
     TrieNode* next[26];
     bool is_word;
