@@ -14,7 +14,6 @@ struct Node{
     }
 };
 
-
 template<class T>
 class LinkList{
 public:
@@ -24,17 +23,17 @@ public:
 public:    
     LinkList(): _head(NULL), _tail(NULL) {}
     
-    Node<T>* insert_node(T& data) { //插入节点
+    void insert_node(T& data) { //插入节点
         if(_head == NULL) {
             _head = new Node<T>(data);
             _tail = _head;
-            return _head;
         }
         else {
             Node<T>* temp = new Node<T>(data);
             _tail->next = temp;
             _tail = temp;
         }
+        cout<<"insert p=" << static_cast<const void *>(_head) << endl;
     }
 
     Node<T>* delete_node(T& data) { //删除节点
@@ -64,7 +63,7 @@ public:
    
     void reverse_link_list(){  //反转链表
         if(_head==NULL || _head->next==NULL) {
-            return _head;
+            return;
         }
         Node<T>* pre=_head, *p=_head->next;
         pre->next = NULL;
@@ -73,7 +72,7 @@ public:
             Node<T>* temp = p;
             p=p->next;
             temp->next = pre;
-            pre = temp;
+            _head = pre = temp;
         }
     }
 
@@ -81,17 +80,10 @@ public:
     void create_link_list(vector<int>& a) {  //创建链表
         Node<T>* _head = NULL, *_tail = NULL;
         for(int i=0; i<a.size(); ++i) {
-            if(_head==NULL) {
-                _head = new Node<T>(a[i]);
-                _tail = _head;
-            }
-            else {
-                Node<T>* temp = new Node<T>(a[i]);
-                _tail->next = temp;
-                _tail = temp;
-            }
+            cout<<"p=" << static_cast<const void *>(_head) << endl;
+            insert_node(a[i]);
         }
-        cout<<_head->data<<endl;
+        cout<<"p=" << static_cast<const void *>(_head) << endl;
     }
 
     void destroy_link_list() { //销毁链表
@@ -112,6 +104,9 @@ public:
         }
         cout<<endl;
     }
+    ~LinkList() {
+        destroy_link_list();
+    }
 };
 
 int main() {
@@ -119,10 +114,12 @@ int main() {
     LinkList<int> lista;
 
     lista.create_link_list(a);
-    cout<<lista._head->data<<endl;
+    cout<<"p="<<static_cast<const void *>(lista._head)<<endl;
+    //cout<<lista._head->data<<endl;
     lista.travserse_link_list();
-
-    lista.destroy_link_list();
+    
+    lista.reverse_link_list();
+    lista.travserse_link_list();
 
     return 0;
 }
