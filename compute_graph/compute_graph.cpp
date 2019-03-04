@@ -79,13 +79,21 @@ public:
 
     //=============================================
     void destroy_graph_list() { //销毁链表
-        /*GraphNode<T>* p = _head;
-        while(p!=NULL) {
-            GraphNode<T>* temp = p;
-            p=p->next;
+        queue<GraphNode<T>*> que;
+        
+        for(int i=0;i<_head_vec.size(); ++i){
+            que.push(_head_vec[i]);
+        }
+
+        while(!que.empty()) {
+            GraphNode<T>* p = que.front();
+            que.pop();
+            for(int i=0; i < p->_output.size(); ++i) {
+                que.push(p->_output[i]);
+            }
             delete p;
         }
-        _head = _tail = NULL;*/
+        _head_vec.clear();
     }
 
     ~GraphList() {
