@@ -25,20 +25,24 @@ public:
 public:    
     GraphList(): _head(NULL), _tail(NULL) {}
     
-    void insert_node(T& data, string pre_layer_name="NULL") { //插入节点
+    void insert_node(T& data, string node_name, string pre_node_name="NULL") { //插入节点
         if(_head == NULL) {
             _head = new GraphNode<T>(data);
             _tail = _head;
+            return;
+        }
+        GraphNode<T>* pre = find_node(pre_node_name);
+        GraphNode<T>* temp = new GraphNode<T>(data, node_name);
+            
+        if(pre==NULL) {
+            _head_vec.push_back(temp);
         }
         else {
-            GraphNode<T>* temp = new GraphNode<T>(data);
-            _tail->next = temp;
-            _tail = temp;
+            pre->_output.push_back(temp);
         }
-        cout<<"insert p=" << static_cast<const void *>(_head) << endl;
     }
 
-    GraphNode<T>* find_node(string target_name) {
+    GraphNode<T>* find_node(string target_name) {  //查找节点
         queue<GraphNode*> que;
         
         for(int i=0;i<_head_vec.size(); ++i){}
@@ -55,7 +59,8 @@ public:
             for(int i=0; i < p->output.size(); ++i) {
                 que.push(p->output[i]);
             }
-        }     
+        }
+        return NULL;     
     }
 
     vector<GraphNode*> bfs_solve() {
