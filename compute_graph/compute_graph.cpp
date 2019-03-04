@@ -1,4 +1,4 @@
-
+#include <queue>
 #include <vector>
 #include <iostream>
 using namespace std;
@@ -8,7 +8,6 @@ template<class T>
 struct GraphNode{
     T _data;
     string _name;
-    vector<GraphNode<T>*> _input;
     vector<GraphNode<T>*> _output;
 
     GraphNode(T& data, string name){
@@ -23,14 +22,9 @@ public:
     vector<GraphNode<T>*> _head_vec;
 
 public:    
-    GraphList(): _head(NULL), _tail(NULL) {}
+    GraphList(){}
     
     void insert_node(T& data, string node_name, string pre_node_name="NULL") { //插入节点
-        if(_head == NULL) {
-            _head = new GraphNode<T>(data);
-            _tail = _head;
-            return;
-        }
         GraphNode<T>* pre = find_node(pre_node_name);
         GraphNode<T>* temp = new GraphNode<T>(data, node_name);
             
@@ -43,28 +37,29 @@ public:
     }
 
     GraphNode<T>* find_node(string target_name) {  //查找节点
-        queue<GraphNode*> que;
+        queue<GraphNode<T>*> que;
         
-        for(int i=0;i<_head_vec.size(); ++i){}
+        for(int i=0;i<_head_vec.size(); ++i){
             que.push(_head_vec[i]);
         }
 
         while(!que.empty()) {
-            GraphNode* p = que.top();
+            GraphNode<T>* p = que.front();
             que.pop();
             if(p->_name == target_name){
                 return p;
             }
 
-            for(int i=0; i < p->output.size(); ++i) {
-                que.push(p->output[i]);
+            for(int i=0; i < p->_output.size(); ++i) {
+                que.push(p->_output[i]);
             }
         }
         return NULL;     
     }
-
-    vector<GraphNode*> bfs_solve() {
-        vector<GraphNode*> res;
+    
+    /*
+    vector<GraphNode<T>*> bfs_solve() {
+        vector<GraphNode<T>*> res;
 
         queue<GraphNode*> que;
         que.push(first);
@@ -80,52 +75,31 @@ public:
         }
     
         return 0;
-    }
+    }*/
 
     //=============================================
-    void create_link_list(vector<int>& a) {  //创建链表
-        Node<T>* _head = NULL, *_tail = NULL;
-        for(int i=0; i<a.size(); ++i) {
-            cout<<"p=" << static_cast<const void *>(_head) << endl;
-            insert_node(a[i]);
-        }
-        cout<<"p=" << static_cast<const void *>(_head) << endl;
-    }
-
-    void destroy_link_list() { //销毁链表
-        GraphNode<T>* p = _head;
+    void destroy_graph_list() { //销毁链表
+        /*GraphNode<T>* p = _head;
         while(p!=NULL) {
             GraphNode<T>* temp = p;
             p=p->next;
             delete p;
         }
-        _head = _tail = NULL;
+        _head = _tail = NULL;*/
     }
 
-    void travserse_link_list() { //遍历链表
-        GraphNode<T>* p=_head;
-        while(p!=NULL) {
-            //cout<< p->data << ", ";
-            p=p->next;
-        }
-        cout<<endl;
-    }
-    ~LinkList() {
-        destroy_link_list();
+    ~GraphList() {
+        destroy_graph_list();
     }
 };
 
 int main() {
-    vector<int> a = {1, 2, 3, 4, 5};
-    GraphList<int> lista;
+    typedef vector<float> VecFloat;
 
-    lista.create_link_list(a);
-    cout<<"p="<<static_cast<const void *>(lista._head)<<endl;
-    //cout<<lista._head->data<<endl;
-    lista.travserse_link_list();
-    
-    lista.reverse_link_list();
-    lista.travserse_link_list();
+    VecFloat a = {1, 2, 3, 4, 5};
+    GraphList<VecFloat> G;
+
+    G.insert_node(a, "slot1");
 
     return 0;
 }
