@@ -54,8 +54,17 @@ leetcode上的题目
 # 3. 公司面试题
 
 ## tencent
-|||
 
+| 题目 | 链接 |
+| -- | -- |
+| 青蛙吃虫子 | [frog_eat_bug](https://github.com/Jarlonyan/interview_code/blob/master/depth_first_search/frog_eat_bug.cpp) |
+| 二维数组，左上角都到右下角的走法 | [user_define_link_list](https://github.com/Jarlonyan/interview_code/blob/master/link_list/user_define_link_list.cpp) |
+
+## bytedance
+
+| 题目 | 链接 |
+| -- | -- |
+| 计算图 | [compute_graph](https://github.com/zacksleo/interview_code/blob/master/compute_graph/compute_graph.cpp) |
 
 
 
