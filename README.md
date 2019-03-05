@@ -65,7 +65,7 @@ leetcode上的题目
 
 | 题目 | 链接 |
 | -- | -- |
-| 计算图 | [compute_graph](https://github.com/zacksleo/interview_code/blob/master/compute_graph/compute_graph.cpp) |
+| 计算图 | [compute_graph](https://github.com/Jarlonyan/interview_code/blob/master/bytedance/compute_graph.cpp) |
 
 
 
