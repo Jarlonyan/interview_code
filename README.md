@@ -58,7 +58,7 @@ leetcode上的题目
 | 题目 | 链接 |
 | -- | -- |
 | 青蛙吃虫子 | [frog_eat_bug](https://github.com/Jarlonyan/interview_code/blob/master/depth_first_search/frog_eat_bug.cpp) |
-| 二维数组，左上角都到右下角的走法 | [user_define_link_list](https://github.com/Jarlonyan/interview_code/blob/master/link_list/user_define_link_list.cpp) |
+| 二维数组，左上角都到右下角的走法 | [left_up_2_right_down](https://github.com/Jarlonyan/interview_code/blob/master/link_list/user_define_link_list.cpp) |
 | 最长斐波拉契数列 | [longest_fibonacci](https://github.com/Jarlonyan/interview_code/blob/master/) |
 
 ## 3.2 bytedance
@@ -66,7 +66,7 @@ leetcode上的题目
 | 题目 | 链接 |
 | -- | -- |
 | 计算图 | [compute_graph](https://github.com/Jarlonyan/interview_code/blob/master/bytedance/compute_graph.cpp) |
-| 实现LRU | [compute_graph](https://github.com/Jarlonyan/interview_code/blob/master/bytedance/LRU.cpp) |
+| 实现LRU | [LRU](https://github.com/Jarlonyan/interview_code/blob/master/bytedance/LRU.cpp) |
 
 
 
