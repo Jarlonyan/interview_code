@@ -67,7 +67,7 @@ leetcode上的题目
 | -- | -- |
 | 计算图 | [compute_graph](https://github.com/Jarlonyan/interview_code/blob/master/bytedance/compute_graph.cpp) |
 | 实现LRU | [LRU](https://github.com/Jarlonyan/interview_code/blob/master/bytedance/LRU.cpp) |
-| 实现kmeans | [LRU](https://github.com/Jarlonyan/interview_code/blob/master/bytedance/kmeans.py) |
+| 实现kmeans | [kmeans](https://github.com/Jarlonyan/interview_code/blob/master/bytedance/kmeans.py) |
 
 
 
