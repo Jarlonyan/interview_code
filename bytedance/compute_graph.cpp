@@ -3,6 +3,11 @@
 #include <iostream>
 using namespace std;
 
+/*
+给你一些神经网络的layer，实现nn的forward过程
+*/
+
+
 //实现自定义图节点
 template<class T>
 struct GraphNode{
