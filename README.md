@@ -53,14 +53,15 @@ leetcode上的题目
 
 # 3. 公司面试题
 
-## tencent
+## 3.1 tencent
 
 | 题目 | 链接 |
 | -- | -- |
 | 青蛙吃虫子 | [frog_eat_bug](https://github.com/Jarlonyan/interview_code/blob/master/depth_first_search/frog_eat_bug.cpp) |
 | 二维数组，左上角都到右下角的走法 | [user_define_link_list](https://github.com/Jarlonyan/interview_code/blob/master/link_list/user_define_link_list.cpp) |
+| 最长斐波拉契数列 | [longest_fibonacci](https://github.com/Jarlonyan/interview_code/blob/master/) |
 
-## bytedance
+## 3.2 bytedance
 
 | 题目 | 链接 |
 | -- | -- |
