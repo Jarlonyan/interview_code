@@ -6,6 +6,12 @@
 using namespace std;
 using namespace __gnu_cxx;
 
+/*
+* 题目：实现LRU
+* 
+*/
+
+
 template <class K, class T>
 struct Node{
     K key;
