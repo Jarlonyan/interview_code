@@ -50,6 +50,10 @@
 
 leetcode上的题目
 
+| 题目 | 链接 |
+| -- | -- |
+| 删除排序数组重复元素 | [remove_duplicates](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/remove_duplicate_sorted_array.cpp) |
+|  | [left_up_2_right_down](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/) |
 
 # 3. 公司面试题
 
