@@ -32,9 +32,9 @@
 
 |题目| 链接 |
 |--|--|
-| 构造二叉树 | [build_bin_tree](https://github.com/Jarlonyan/interview_code/blob/master/sort_algorithms/build_bin_tree.cpp) |
-| 遍历二叉树：递归、非递归、先序、中序、后序 | [traverse_bin_tree](https://github.com/Jarlonyan/interview_code/blob/master/sort_algorithms/traverse_bin_tree.cpp) |
-| 二叉树高度 | [height_bin_tree](https://github.com/Jarlonyan/interview_code/blob/master/sort_algorithms/height_bin_tree.cpp) |
+| 构造二叉树 | [build_bin_tree](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/build_bin_tree.cpp) |
+| 遍历二叉树：递归、非递归、先序、中序、后序 | [traverse_bin_tree](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/traverse_bin_tree.cpp) |
+| 二叉树高度 | [height_bin_tree](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/height_bin_tree.cpp) |
 
 
 
