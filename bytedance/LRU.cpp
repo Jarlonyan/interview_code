@@ -1,16 +1,13 @@
+/*
+* 题目：实现LRU
+*/
+
 // A simple LRU cache written in C++
 // Hash map + doubly linked list
 #include <iostream>
 #include <vector>
-#include <ext/hash_map>
+#include <unordered_map>
 using namespace std;
-using namespace __gnu_cxx;
-
-/*
-* 题目：实现LRU
-* 
-*/
-
 
 template <class K, class T>
 struct Node{
@@ -86,14 +83,14 @@ private:
         node->next->prev = node;
     }
 private:
-    hash_map<K, Node<K,T>* > hashmap_;
+    unordered_map<K, Node<K,T>* > hashmap_;
     vector<Node<K,T>* > free_entries_; // 存储可用结点的地址
     Node<K,T> *head_, *tail_;
     Node<K,T> *entries_; // 双向链表中的结点
 };
 
 int main(){
-    hash_map<int, int> map;
+    unordered_map<int, int> map;
     map[9]= 999;
     cout<<map[9]<<endl;
     cout<<map[10]<<endl;
