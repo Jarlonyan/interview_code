@@ -1,5 +1,5 @@
 /*
-* 题目：实现LRU
+* 题目：C++实现LRU
 */
 
 // A simple LRU cache written in C++

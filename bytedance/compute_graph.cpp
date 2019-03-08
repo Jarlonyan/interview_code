@@ -4,9 +4,11 @@
 using namespace std;
 
 /*
-给你一些神经网络的layer，实现nn的forward过程
+题目：给你一些神经网络的layer，实现nn的forward过程
 */
 
+template<class T>
+string vec2str(T& a);
 
 //实现自定义图节点
 template<class T>
@@ -62,28 +64,27 @@ public:
         return NULL;     
     }
     
-    /*
-    vector<GraphNode<T>*> bfs_solve() {
-        vector<GraphNode<T>*> res;
-
-        queue<GraphNode*> que;
-        que.push(first);
+    
+    int bfs_solve() {
+        queue<GraphNode<T>*> que;
+        for(int i=0;i<_head_nodes_vec.size(); ++i){
+            que.push(_head_nodes_vec[i]);
+        }
 
         while(!que.empty()) {
-            GraphNode* p = que.top();
+            GraphNode<T>* p = que.front();
             que.pop();
-            //print p
-            res.push_back(p);
-            for(int i=0; i < p->output.size(); ++i) {
-                que.push(p->output[i]);
+            cout<< vec2str(p->_data) << endl;
+            for(int i=0; i < p->_output.size(); ++i) {
+                que.push(p->_output[i]);
             }
         }
     
         return 0;
-    }*/
+    }
 
     //=============================================
-    void destroy_graph() { //销毁链表
+    void destroy_graph() { //销毁图
         queue<GraphNode<T>*> que;
         
         for(int i=0;i<_head_nodes_vec.size(); ++i){
@@ -109,11 +110,34 @@ public:
 int main() {
     typedef vector<float> VecFloat;
 
-    VecFloat a = {1, 2, 3, 4, 5};
+    VecFloat x1 = {1, 1, 1};
+    VecFloat x2 = {2, 2, 2};
+    VecFloat x3 = {3, 3, 3};
+    VecFloat x4 = {4, 4, 4};
+    VecFloat x5 = {5, 5, 5};
+    VecFloat x6 = {6, 6, 6};
     Graph<VecFloat> G;
 
-    G.insert_node(a, "slot1");
+    G.insert_node(x1, "slot1");
+    G.insert_node(x2, "slot2");
+    G.insert_node(x3, "layer_x3", "slot2");
+    G.insert_node(x5, "layer_x5", "layer_x3");
+    G.insert_node(x4, "layer_x4", "slot2");
+    
+    G.bfs_solve();
 
     return 0;
+}
+
+//====================
+template<class T>
+string vec2str(T& a) {
+    int n = a.size();
+    string res;
+    for (int i = 0; i<n-1; i++) {
+        res += to_string(a[i]) + ", ";
+    }
+    res += to_string(a[n-1]);
+    return res;
 }
 
