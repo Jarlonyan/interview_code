@@ -6,11 +6,13 @@
 #include <algorithm>
 using namespace std;
 
-// a={2, 3, 5, 6, 8, 9, 13, 14}
-//    0, 1, 2, 3, 4, 5,  6,  7
-//    dp[i][k]是结束在[i,k]的最长路径
-//    dp[i][k] = dp[i][j] + 1
-//   dp[1,2]=3, dp[1,3]=0, dp[2,3]=0, 
+/* 题目：给定一个数组a,找到最长的斐波那契序列
+*   a={2, 3, 5, 6, 8, 9, 13, 14}
+* idx= 0, 1, 2, 3, 4, 5,  6,  7
+*    dp[i][k]是结束在[i,k]的最长路径
+*    dp[i][k] = dp[i][j] + 1
+*   dp[1,2]=3, dp[1,3]=0, dp[2,3]=0, 
+*/
 
 int len_longes_fib_sub_seq(vector<int>& a) {
     int n = a.size();
@@ -19,7 +21,7 @@ int len_longes_fib_sub_seq(vector<int>& a) {
     for(int i=0; i<n; ++i) {
         for(int j=0; j<n; ++j) {
             if(a[i]+a[j]==a[k]) {
-
+                
             }
         }
     }
