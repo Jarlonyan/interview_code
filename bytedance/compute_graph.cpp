@@ -4,7 +4,7 @@
 using namespace std;
 
 /*
-题目：给你一些神经网络的layer，实现nn的forward过程
+题目：给你一些神经网络的layer，求出在forward过程中，layer的先后计算顺序
 */
 
 template<class T>
