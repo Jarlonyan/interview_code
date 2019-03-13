@@ -1,6 +1,14 @@
-
-
-
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
 
 # 1. 初级代码
 
@@ -77,7 +85,6 @@
 | 实现kmeans | [kmeans](https://github.com/Jarlonyan/interview_code/blob/master/bytedance/kmeans.py) |
 
 
-![](http://latex.codecogs.com/gif.latex?\\frac{1}{1+sin(x)})
-
+$ e = m c^2 $ 
 
 
