@@ -7,6 +7,7 @@ using namespace std;
 * 题目：remove duplicate from sorted array
 * 从一个给定的排序数组中删除重复元素
 * example: a=[1,1,1,2,5,6,6]
+*          res=[1,2,5,6]
 */
 
 void print_vec(vector<int>& a) {
@@ -34,7 +35,7 @@ void remove_duplicates(vector<int>& a) {
 }
 
 int main() {
-    vector<int> a = {1, 1, 1, 2, 5, 6, 6};
+    vector<int> a = {1, 1, 1, 2, 2, 2, 5, 6, 6};
     print_vec(a);
     remove_duplicates(a);
     print_vec(a);

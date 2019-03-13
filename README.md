@@ -14,7 +14,7 @@
 
 ## 1.2. sort_algorithms
 
-6个排序算法。冒泡、插入、选择、合并、快速、堆排序
++ 6个排序算法。冒泡、插入、选择、合并、快速、堆排序
 
 |题目| 链接 |
 |--|--|
@@ -36,6 +36,8 @@
 | 二叉树查找树 | [bin_search_tree](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/bin_search_tree.cpp) |
 | 遍历二叉树：递归、非递归、先序、中序、后序 | [traverse_bin_tree](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/traverse_bin_tree.cpp) |
 | 二叉树高度 | [height_bin_tree](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/height_bin_tree.cpp) |
+| 二叉树z扫描 | [height_bin_tree](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/bin_tree_zigzag_Level.cpp) |
+
 
 
 ---------------
@@ -48,12 +50,13 @@
 
 ## 2.2. leetcode
 
-leetcode上的题目
++ leetcode上的题目
 
 | 题目 | 链接 |
 | -- | -- |
 | 删除排序数组重复元素 | [remove_duplicates](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/remove_duplicate_sorted_array.cpp) |
 |  | [left_up_2_right_down](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/) |
+| 二叉树z字形层次遍历）LeetCode#103 | [left_up_2_right_down](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/bin_tree_zigzag_Level.cpp) |
 
 # 3. 公司面试题
 
@@ -73,6 +76,8 @@ leetcode上的题目
 | 实现LRU | [LRU](https://github.com/Jarlonyan/interview_code/blob/master/bytedance/LRU.cpp) |
 | 实现kmeans | [kmeans](https://github.com/Jarlonyan/interview_code/blob/master/bytedance/kmeans.py) |
 
+
+<img src="http://latex.codecogs.com/gif.latex?\frac{\partial J}{\partial \theta_k^{(j)}}=\sum_{i:r(i,j)=1}{\big((\theta^{(j)})^Tx^{(i)}-y^{(i,j)}\big)x_k^{(i)}}+\lambda \theta_k^{(j)}" />
 
 
 
