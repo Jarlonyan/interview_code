@@ -25,13 +25,13 @@ int dp_solve(vector<int>& a) {
     for (int i = 0; i < n; ++i)
         index[a[i]] = i;
 
-    unordered_map<int, int> longest;
+    unordered_map<int, int> dp;
     int res = 0;
-    for (int k = 0; k < N; ++k) {
+    for (int k = 0; k < n; ++k) {
         for (int j = 0; j < k; ++j) {
             if (a[k] - a[j] < a[j] && index.count(a[k] - a[j])) {
                 int i = index[a[k] - a[j]];
-                longest[j * n + k] = longest[i * n + j] + 1;
+                dp[j * n + k] = dp[i * n + j] + 1;
                 res = max(res, dp[j * n + k] + 2);
             }
         }
@@ -41,7 +41,8 @@ int dp_solve(vector<int>& a) {
 
 int main() {
     vector<int> a = {3, 4, 5, 6, 7, 8, 13, 16};
-    
+    int res = dp_solve(a);
+    cout<<res<<endl; 
     return 0;
 }
 
