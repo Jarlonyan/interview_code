@@ -83,8 +83,24 @@
 | 计算图 | [compute_graph](https://github.com/Jarlonyan/interview_code/blob/master/bytedance/compute_graph.cpp) |
 | 实现LRU | [LRU](https://github.com/Jarlonyan/interview_code/blob/master/bytedance/LRU.cpp) |
 | 实现kmeans | [kmeans](https://github.com/Jarlonyan/interview_code/blob/master/bytedance/kmeans.py) |
+| 青蛙吃虫子 | [frog_eat_bug](https://github.com/Jarlonyan/interview_code/blob/master/bytedance/frog_eat_bug.cpp) |
+
 
 
 $ e = m c^2 $ 
+
+
+
+概率题目
+
+一个数字生成器，怎么得到1/2的概率
+
+用map-reduce计算A^T*A，矩阵A是一个窄矩阵
+
+神经网络基础，比如L1、L2
+
+分类问题，但是类别之间有偏序关系
+
+
 
 
