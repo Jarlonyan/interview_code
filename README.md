@@ -44,11 +44,13 @@
 
 + 动态规划
 
-| 题目 | 链接 |
-| -- | -- |
-| xxxx | [xxxx](https://github.com/Jarlonyan/interview_code/blob/master/bytedance/frog_eat_bug.cpp) |
-| xxxx | [xxxx](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/) |
-| xxxx | [xxxx](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/) |
+| 题目 | 链接 | 难度 | 
+| -- | -- | -- |
+| 青蛙吃虫子 | [frog_eat_bug](https://github.com/Jarlonyan/interview_code/blob/master/bytedance/frog_eat_bug.cpp) | middle |
+| 最长斐波拉契序列 | [xxxx](https://github.com/Jarlonyan/interview_code/blob/master/bytedance/) | middle |
+| 二维数组，左上角都到右下角的走法 | [left_up_2_right_down](https://github.com/Jarlonyan/interview_code/blob/master/link_list/user_define_link_list.cpp) | |
+| xxxx | [xxxx](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/) | |
+| xxxx | [xxxx](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/) | |
 
 
 ## 2.2. leetcode
@@ -58,8 +60,8 @@
 | 题目 | 链接 |
 | -- | -- |
 | 删除排序数组重复元素 | [remove_duplicates](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/remove_duplicate_sorted_array.cpp) |
-|  | [xxxxxx](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/) |
 | 二叉树z字形层次遍历）LeetCode#103 | [bin_tree_zigzag_Level](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/bin_tree_zigzag_Level.cpp) |
+|  | [xxxxxx](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/) |
 
 # 3. 公司面试题
 
@@ -81,20 +83,6 @@
 | 青蛙吃虫子 | [frog_eat_bug](https://github.com/Jarlonyan/interview_code/blob/master/bytedance/frog_eat_bug.cpp) |
 
 
-
-$ e = m c^2 $ 
-
-
-
-概率题目
-
-一个数字生成器，怎么得到1/2的概率
-
-用map-reduce计算A^T*A，矩阵A是一个窄矩阵
-
-神经网络基础，比如L1、L2
-
-分类问题，但是类别之间有偏序关系
 
 
 
