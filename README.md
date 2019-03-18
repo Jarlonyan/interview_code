@@ -1,14 +1,3 @@
-<head>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-            inlineMath: [['$','$']]
-            }
-        });
-    </script>
-</head>
 
 # 1. 初级代码
 
@@ -44,8 +33,7 @@
 | 二叉树查找树 | [bin_search_tree](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/bin_search_tree.cpp) |
 | 遍历二叉树：递归、非递归、先序、中序、后序 | [traverse_bin_tree](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/traverse_bin_tree.cpp) |
 | 二叉树高度 | [height_bin_tree](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/height_bin_tree.cpp) |
-| 二叉树z扫描 | [height_bin_tree](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/bin_tree_zigzag_Level.cpp) |
-
+| 二叉树z扫描 | [bin_tree_zigzag_Level](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/bin_tree_zigzag_Level.cpp) |
 
 
 ---------------
@@ -54,7 +42,14 @@
 
 ## 2.1. dynamic_programming
 
-动态规划
++ 动态规划
+
+| 题目 | 链接 |
+| -- | -- |
+| xxxx | [xxxx](https://github.com/Jarlonyan/interview_code/blob/master/bytedance/frog_eat_bug.cpp) |
+| xxxx | [xxxx](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/) |
+| xxxx | [xxxx](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/) |
+
 
 ## 2.2. leetcode
 
@@ -63,8 +58,8 @@
 | 题目 | 链接 |
 | -- | -- |
 | 删除排序数组重复元素 | [remove_duplicates](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/remove_duplicate_sorted_array.cpp) |
-|  | [left_up_2_right_down](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/) |
-| 二叉树z字形层次遍历）LeetCode#103 | [left_up_2_right_down](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/bin_tree_zigzag_Level.cpp) |
+|  | [xxxxxx](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/) |
+| 二叉树z字形层次遍历）LeetCode#103 | [bin_tree_zigzag_Level](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/bin_tree_zigzag_Level.cpp) |
 
 # 3. 公司面试题
 
