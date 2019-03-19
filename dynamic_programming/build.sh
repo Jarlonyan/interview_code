@@ -9,5 +9,9 @@
 #g++ -std=c++11  -I./ max_seq_sum.cpp  -o dynamic_programming
 
 
-#g++ -std=c++11  -I./ frog_eat_bug.cpp  -o dynamic_programming
+g++ -std=c++11  -I./ frog_eat_bug.cpp  -o dynamic_programming
+
+#g++ -std=c++11  -I./ longest_fibonacci_seq.cpp  -o dynamic_programming
+
+#g++ -std=c++11  -I./ test.cpp  -o dynamic_programming
 
