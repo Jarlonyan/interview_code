@@ -1,15 +1,8 @@
 
 #include <vector>
 #include <iostream>
+#include "common.h"
 using namespace std;
-
-void print_vec(vector<int>& a) {
-    int n = a.size();
-    for (int i = 0; i < a.size(); i++) {
-        cout << a[i] << ", ";
-    }
-    cout << endl;
-}
 
 //挨个遍历元素，将其插入其左边有序数组中
 void insert_sort(vector<int>& a) {

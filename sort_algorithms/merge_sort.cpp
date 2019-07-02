@@ -1,15 +1,8 @@
 
 #include <vector>
 #include <iostream>
+#include "common.h"
 using namespace std;
-
-void print_vec(vector<int>& a) {
-    int n = a.size();
-    for (int i = 0; i < a.size(); i++) {
-        cout << a[i] << ", ";
-    }
-    cout << endl;
-}
 
 void merge_2_array(vector<int>& a, int low, int mid, int high) {
     int n = high-low+1, idx = 0, i=low, j=mid+1;

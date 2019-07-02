@@ -3,15 +3,8 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include "common.h"
 using namespace std;
-
-void print_vec(vector<int>& a) {
-    int n = a.size();
-    for (int i = 0; i < a.size(); i++) {
-        cout << a[i] << ", ";
-    }
-    cout << endl;
-}
 
 //挨个遍历元素，选择其右边最小的数与其交换
 void select_sort(vector<int>& a) {

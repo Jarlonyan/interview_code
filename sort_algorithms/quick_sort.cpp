@@ -2,15 +2,8 @@
 #include <vector>
 #include <stack>
 #include <iostream>
+#include "common.h"
 using namespace std;
-
-void print_vec(vector<int>& a) {
-    int n = a.size();
-    for (int i = 0; i < a.size(); i++) {
-        cout << a[i] << ", ";
-    }
-    cout << endl;
-}
 
 int partition(vector<int>& a, int low, int high) {
     int pivot = a[low];
