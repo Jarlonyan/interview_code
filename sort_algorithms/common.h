@@ -6,10 +6,10 @@
 
 void print_vec(std::vector<int>& a) {
     int n = a.size();
-    for (int i = 0; i < a.size(); i++) {
+    for (int i = 0; i < n-1; i++) {
         std::cout << a[i] << ", ";
     }
-    std::cout << std::endl;
+    std::cout << a[n-1] << std::endl;
 }
 
 #endif

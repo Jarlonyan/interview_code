@@ -4,7 +4,7 @@
 #include "common.h"
 using namespace std;
 
-//挨个遍历元素，将其插入其左边有序数组中
+//插入排序：挨个遍历元素，将其插入其左边有序数组中
 void insert_sort(vector<int>& a) {
     int n = a.size();
     for(int i = 1; i < n; ++i) {

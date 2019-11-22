@@ -6,8 +6,8 @@
 #include "common.h"
 using namespace std;
 
-void max_heapify(vector<int> &a, int beg, int end)
-{
+// 堆排序
+void max_heapify(vector<int> &a, int beg, int end) {
     int curr = beg;
     int child = curr * 2 + 1;
     while (child < end) {
@@ -25,8 +25,7 @@ void max_heapify(vector<int> &a, int beg, int end)
 }
 
 // 
-void heap_sort(vector<int>& a)
-{
+void heap_sort(vector<int>& a) {
     int n = a.size();
     for (int i = n / 2 - 1; i >= 0; i--) { // build max heap
         max_heapify(a, i, a.size() - 1);

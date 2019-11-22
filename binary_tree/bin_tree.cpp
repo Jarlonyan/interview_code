@@ -1,43 +1,59 @@
 
 #include <stdio.h>
 #include <iostream>
-#include <set>
 #include <string>
 #include <vector>
-#include <stack>
 #include <algorithm>
 using namespace std;
 
 struct TreeNode{
-    int data;
+    char data;
     TreeNode* left;
     TreeNode* right;
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+    TreeNode(char x) : data(x), left(NULL), right(NULL) {}
 };
 
-/* 题目：将有序数组转成二分查找树
-   这道题是二分查找树的题目，要把一个有序数组转换成一颗二分查找树。其实从本质来看，
-   如果把一个数组看成一棵树（也就是以中点为根，左右为左右子树，依次下去）数组就等价于
-   一个二分查找树。所以如果要构造这棵树，那就是把中间元素转化为根，然后递归构造左右子树。
-   所以我们还是用二叉树递归的方法来实现，以根作为返回值，每层递归函数取中间元素，作为当前根和赋上结点值，
-   然后左右结点接上左右区间的递归函数返回值。时间复杂度还是一次树遍历O(n)，总的空间复杂度是栈空间O(logn)
-   加上结果的空间O(n)，额外空间是O(logn)，总体是O(n)。
-*/
-
-TreeNode* sort_array_2_BST(vector<int>& a, int left, int right) {
-    if(left > right) {
+// 创建一颗二叉树,其中A~Z字符代表树的数据,用'#'表示空树
+TreeNode* create_bin_tree(string seq, int &pos) { //先序递归构建二叉树
+    if (pos >= seq.length()) {
         return NULL;
     }
-    int mid = (left+right)/2;
-    TreeNode* root = new TreeNode(a[mid]);
-    root->left = helper(a, left, mid-1);
-    root->right = helper(a, mid+1, right);
-    return root;
+    else if (seq[pos] == '#') {
+        pos++;
+        return NULL;
+    }
+    else {
+        TreeNode* T = new TreeNode(seq[pos++]);
+        T->left = create_bin_tree(seq, pos);
+        T->right = create_bin_tree(seq, pos);
+        return T;
+    } 
+}
+
+void in_order_bin_tree(TreeNode* T) {
+    if(T) {
+        in_order_bin_tree(T->left);
+        cout<< T->data << " ";
+        in_order_bin_tree(T->right);
+    }
+}
+
+void destroy_bin_tree(TreeNode* T) {
+    if (T != NULL) {
+        destroy_bin_tree(T->left);
+        destroy_bin_tree(T->right);
+        delete T;
+    }
 }
 
 int main() {
-    vector<int> a = {1, 3, 5, 7, 8, 9};
-    
+    string str_seq = "ABC##DE#G##F###";
+    int idx = 0;
+    TreeNode *T = create_bin_tree(str_seq, idx);
+    in_order_bin_tree(T);
+    cout<<endl;
+
+    destroy_bin_tree(T);
     return 0;
 }
 

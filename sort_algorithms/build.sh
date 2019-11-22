@@ -1,7 +1,7 @@
 
 #g++ -std=c++11 -I ./  bubble_sort.cpp  -o sort
 
-g++ -std=c++11 -I ./  insert_sort.cpp  -o sort
+#g++ -std=c++11 -I ./  insert_sort.cpp  -o sort
 
 #g++ -std=c++11 -I ./  select_sort.cpp  -o sort
 
@@ -11,4 +11,5 @@ g++ -std=c++11 -I ./  insert_sort.cpp  -o sort
 
 #g++ -std=c++11 -I ./  heap_sort.cpp  -o sort
 
+g++ -std=c++11 -I ./  shell_sort.cpp  -o sort
 
