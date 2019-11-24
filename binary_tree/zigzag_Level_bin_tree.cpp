@@ -23,13 +23,13 @@ using namespace std;
 */
 
 vector<vector<char>> zigzag_level_bin_tree(TreeNode* root) {
-    vector<vector<char>> tree_vector;
+    vector<vector<char>> ret;
     vector<char> ivec;
     queue<TreeNode*> tree_queue;
     if (NULL == root) {
-        return tree_vector;
+        return ret;
     }
-    return tree_vector; 
+    return ret; 
 }
 
 int main() {
