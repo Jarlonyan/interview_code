@@ -2,8 +2,9 @@
 #include <stdio.h>
 #include <iostream>
 #include <string>
+#include <stack>
 #include <vector>
-#include <queue>
+#include <deque>
 #include <algorithm>
 using namespace std;
 
@@ -23,13 +24,42 @@ using namespace std;
 */
 
 vector<vector<char>> zigzag_level_bin_tree(TreeNode* root) {
-    vector<vector<char>> ret;
-    vector<char> ivec;
-    queue<TreeNode*> tree_queue;
-    if (NULL == root) {
+    vector<vector<char> > ret;
+    deque<TreeNode*> deque;
+    bool to_right = true;
+
+    if (!root) {
         return ret;
     }
-    return ret; 
+    deque.push_back(root);
+
+    while ( !deque.empty() ) {
+        ret.push_back({});
+        int n = deque.size();
+        for (int i=0; i<n; ++i) {
+            TreeNode* cur = NULL;
+            if (to_right) {
+                cur = deque.front();
+                deque.pop_front();
+            }
+            else {
+                cur = deque.back();
+                deque.pop_back();
+            }
+
+            ret[ret.size()-1].push_back(cur->data);
+            if (to_right) {
+                if (cur->left) deque.push_back(cur->left);
+                if (cur->right) deque.push_back(cur->right);
+            }
+            else {
+                if (cur->right) deque.push_front(cur->right);
+                if (cur->left) deque.push_front(cur->left);
+            }
+        }
+        to_right = !to_right;
+    }
+    return ret;
 }
 
 int main() {
@@ -37,8 +67,16 @@ int main() {
     int pos = 0;
     TreeNode *T = create_bin_tree(seq, pos);
 
-    in_order_bin_tree(T);
-    cout<<endl;
+    auto ret = zigzag_level_bin_tree(T);
+    for(int i=0; i<ret.size(); ++i) {
+        for(int j=0; j<ret.size(); ++j) {
+            cout<< ret[i][j] <<" ";
+        }
+        cout<< endl;
+    }
+
+    //in_order_bin_tree(T);
+    //cout<<endl;
 
     destroy_bin_tree(T);
     return 0;
