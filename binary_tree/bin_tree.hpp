@@ -46,13 +46,3 @@ void destroy_bin_tree(TreeNode* T) {
     }
 }
 
-int main() {
-    string str_seq = "ABC##DE#G##F###";
-    int pos = 0;
-    TreeNode *T = create_bin_tree(str_seq, pos);
-    in_order_bin_tree(T);
-    cout<<endl;
-
-    destroy_bin_tree(T);
-    return 0;
-}
