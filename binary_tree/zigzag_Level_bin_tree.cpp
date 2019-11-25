@@ -8,6 +8,7 @@
 #include <algorithm>
 using namespace std;
 
+//https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/solution/deque-c-by-he-le-le-le-la-e/
 #include "bin_tree.hpp"
 
 // ZigZag方式遍历二叉树，即：根->左子->右子->右子的左子->右子的右子->XXX
@@ -24,7 +25,7 @@ using namespace std;
 */
 
 vector<vector<char>> zigzag_level_bin_tree(TreeNode* root) {
-    vector<vector<char> > ret;
+    vector<vector<char>> ret;
     deque<TreeNode*> deque;
     bool to_right = true;
 
@@ -46,7 +47,6 @@ vector<vector<char>> zigzag_level_bin_tree(TreeNode* root) {
                 cur = deque.back();
                 deque.pop_back();
             }
-
             ret[ret.size()-1].push_back(cur->data);
             if (to_right) {
                 if (cur->left) deque.push_back(cur->left);
@@ -69,8 +69,8 @@ int main() {
 
     auto ret = zigzag_level_bin_tree(T);
     for(int i=0; i<ret.size(); ++i) {
-        for(int j=0; j<ret.size(); ++j) {
-            cout<< ret[i][j] <<" ";
+        for(int j=0; j<ret[i].size(); ++j) {
+            cout<< ret[i][j] <<",";
         }
         cout<< endl;
     }

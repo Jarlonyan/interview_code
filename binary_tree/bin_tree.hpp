@@ -30,11 +30,27 @@ TreeNode* create_bin_tree(string seq, int &pos) { //先序递归构建二叉树
     } 
 }
 
+void pre_order_bin_tree(TreeNode* T) {
+    if (T) {
+        cout<< T->data << " ";
+        pre_order_bin_tree(T->left);
+        pre_order_bin_tree(T->right);
+    }
+}
+
 void in_order_bin_tree(TreeNode* T) {
     if (T) {
         in_order_bin_tree(T->left);
         cout<< T->data << " ";
         in_order_bin_tree(T->right);
+    }
+}
+
+void post_order_bin_tree(TreeNode* T) {
+    if (T) {
+        post_order_bin_tree(T->left);
+        post_order_bin_tree(T->right);
+        cout<< T->data <<" ";
     }
 }
 
