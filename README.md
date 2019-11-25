@@ -5,7 +5,7 @@
 
 |题目| 链接 |
 |--|--|
-| 链表的基本操作）| [link_list](https://github.com/Jarlonyan/interview_code/blob/master/link_list/link_list.hpp) |
+| 链表的基本操作(创建、销毁、遍历)| [link_list](https://github.com/Jarlonyan/interview_code/blob/master/link_list/link_list.hpp) |
 | 链表的反转（递归、非递归）| [reverse_link_list](https://github.com/Jarlonyan/interview_code/blob/master/link_list/reverse_link_list.cpp) |
 | 用户自定义链表 | [user_define_link_list](https://github.com/Jarlonyan/interview_code/blob/master/link_list/user_define_link_list.cpp) |
 | 两个链表相加 | [add_tow_link_list](//github.com/Jarlonyan/interview_code/blob/master/link_list/add_two_link_list.cpp) |
