@@ -35,7 +35,8 @@
 | 二叉树查找树 | [bin_search_tree](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/bin_search_tree.cpp) |
 | 遍历二叉树：递归、非递归、先序、中序、后序 | [traverse_bin_tree](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/traverse_bin_tree.cpp) |
 | 二叉树高度 | [height_bin_tree](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/height_bin_tree.cpp) |
-| 二叉树z扫描 | [bin_tree_zigzag_Level](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/bin_tree_zigzag_Level.cpp) |
+| 二叉树z扫描(蛇形) | [bin_tree_zigzag_Level](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/bin_tree_zigzag_Level.cpp) |
+| 二叉树属性统计：第k层叶子节点个数、第k层节点个数 | [bin_tree_zigzag_Level](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/bin_tree_zigzag_Level.cpp) |
 
 
 ---------------
