@@ -29,37 +29,69 @@ class BSTNode{
             left = pleft;
             right = pright;
         }
+        BSTNode(T value) {
+            key = value;
+            parent = NULL;
+            left = NULL;
+            right = NULL;
+        }
 };
 
 template <class T>
-void BSTree<T>::insert(BSTNode<T>* &tree, BSTNode<T>* z)
-{
-    BSTNode<T> *y = NULL;
-    BSTNode<T> *x = tree;
+void insert(BSTNode<T>* &root, T val) {
+    BSTNode<T> *x = new BSTNode<T>(val);
+    BSTNode<T> *pre = NULL;
+    BSTNode<T> *p = root;
 
-    // 查找z的插入位置
-    while (x != NULL) {
-        y = x;
-        if (z->key < x->key)
-            x = x->left;
+    // 查找val的插入位置
+    while (p != NULL) {
+        pre = p;
+        if (val < p->key)
+            p = p->left;
         else
-            x = x->right;
+            p = p->right;
     }
 
-    z->parent = y;
-    if (y==NULL)
-        tree = z;
-    else if (z->key < y->key)
-        y->left = z;
+    x->parent = pre;
+    if (pre==NULL)
+        root = x;
+    else if (val < pre->key)
+        pre->left = x;
     else
-        y->right = z;
+        pre->right = x;
+}
+
+template <class T>
+void pre_order_bin_tree(BSTNode<T>* root) {
+    if (root) {
+        cout<< root->key << " ";
+        pre_order_bin_tree(root->left);
+        pre_order_bin_tree(root->right);
+    }
+}
+
+template <class T>
+void destroy(BSTNode<T>* &root) {
+    if (root == NULL) return;
+    if (root->left)
+        destroy(root->left);
+    if (root->right)
+        destroy(root->right);
+    delete root;
+    root = NULL;
 }
 
 int main() {
     vector<int> a = {2,9,1,7,5,6};
-    BSTNode<int> *T = NULL;
-    
+    BSTNode<int> *root = new BSTNode<int>(a[0]);
+    for (int i=1; i<a.size(); ++i) {
+        insert(root, a[i]);
+    }
 
+    pre_order_bin_tree(root);
+    cout<<endl;
+
+    destroy(root);
     return 0;
 }
 

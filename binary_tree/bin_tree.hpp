@@ -54,11 +54,12 @@ void post_order_bin_tree(TreeNode* T) {
     }
 }
 
-void destroy_bin_tree(TreeNode* T) {
+void destroy_bin_tree(TreeNode* &T) {
     if (T != NULL) {
         destroy_bin_tree(T->left);
         destroy_bin_tree(T->right);
         delete T;
+        T = NULL;
     }
 }
 
