@@ -10,7 +10,7 @@ using namespace std;
 */
 
 
-int dp_solve(vector<int>& a, int K, int n) {
+int dp_solve(vector<int>& a, int k) {
     return res;
 }
 
@@ -19,8 +19,8 @@ int main() {
     int k = 11;
 
     int ret = dp_solve(a, k);
-
     cout<< ret<<endl;
+
     return 0;
 }
 
