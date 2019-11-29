@@ -37,8 +37,8 @@
 | 二叉树判定：平衡、对称 | [judge_bin_tree](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/judge_bin_tree.cpp) |
 | 二叉树重建：根据中序、先序重建 | [rebuild_bin_tree](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/rebuild_bin_tree.cpp) |
 | 二叉树遍历：层次遍历 | [traverse_bin_tree](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/traverse_bin_tree.cpp) |
-| 二叉树z扫描(蛇形) | [bin_tree_zigzag_Level](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/bin_tree_zigzag_Level.cpp) |
-| 二叉树查找树 | [bin_search_tree](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/bin_search_tree.cpp) |
+| 二叉树z扫描(蛇形) | [bin_tree_zigzag_Level](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/zigzag_Level_bin_tree.cpp) |
+| 二叉查找树 | [bin_search_tree](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/bin_search_tree.cpp) |
 
 
 ---------------
