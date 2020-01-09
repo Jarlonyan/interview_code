@@ -23,7 +23,8 @@ http://blog.sina.com.cn/s/blog_14ecbfd490102wl8u.html
 class SegmentTree {
   private:
     int n;
-    vector<int> max_val, to_add;
+    vector<int> max_val;
+    vector<int> to_add;
 
     void push(int i, int tl, int tr) {
         max_val[i] += to_add[i];
@@ -50,10 +51,6 @@ class SegmentTree {
 };
 
 int main() {
-    vector<int> a = {7,6,3,5}; //格子中原来的整数
-    int idx = 1;
-    int x = 4;
-
     
 
     return 0;
