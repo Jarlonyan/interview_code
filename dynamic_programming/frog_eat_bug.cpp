@@ -15,7 +15,7 @@ using namespace std;
 
 int dp_solve(vector<int>& a, int K, int n) {
     int m = a.size();
-    vector<vector<int>> dp(m, vector<int>(n+1, 0)); //dp[i][j]表示当前跳j步
+    vector<vector<int>> dp(m, vector<int>(n+1, 0)); //dp[i][j]表示当前跳j步, i表示在第i个位置,最多能吃到多少虫子
     //init dp, 第一跳的结果
     for(int i=0; i<K; i++) {
         dp[i][1] = a[i];

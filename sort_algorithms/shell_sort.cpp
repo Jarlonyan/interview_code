@@ -28,6 +28,7 @@ void shell_sort(vector<int> &a) {
 
             a[j + gap] = temp;
         }
+        print_vec(a);
     }
 }
 
