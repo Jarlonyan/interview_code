@@ -27,19 +27,6 @@ struct Node {
     Node &operator=(const Node &) = delete;
 };
 
-template<typename T>
-class Iterator{
-  public:
-    Iterator() : ptr(nullptr) {}
-    explicit Iterator(T *p) : ptr(p) {};
-    Iterator &operator = (T *p) {
-        ptr = p;
-        return *this;
-    }
-
-    Iterator operation++(int)
-
-};
 
 
 
