@@ -14,6 +14,9 @@ https://github.com/guoxiao/skiplist/blob/master/skiplist.hpp
 #include <string>
 #include <vector>
 #include <algorithm>
+
+#include "utils.h"
+
 using namespace std;
 
 template<typename KeyType, typename ValueType>
@@ -27,7 +30,13 @@ struct Node {
     Node &operator=(const Node &) = delete;
 };
 
-
+template<typename Key, typename T, typename Compare=std::less<Key>, typename Allocator=std::allocator<std::pair<Key,T>>>
+class SkipList {
+  public:
+    using NodeType = Node<Key,T>;
+    using Iter = Iterator<NodeType>;
+    using NodeAllocator = std::allocator_traits<Allocator>:: 
+};
 
 
 
