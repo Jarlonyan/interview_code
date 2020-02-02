@@ -12,7 +12,7 @@
 #include <string>
 using namespace std;
 
-// 字典树
+// 节点
 struct TrieNode{
     TrieNode* next[26];
     bool is_word;
@@ -29,6 +29,7 @@ struct TrieNode{
     }
 };
 
+// 字典树
 class Trie {
   private:
     TrieNode* root;
@@ -69,13 +70,16 @@ class Trie {
 };
 
 
-
-
 int main() {
-    string word = "asdgghaia";
     Trie trie;
-    trie.insert(word);
+    trie.insert("asdghaia");
+    trie.insert("asdgwxy");
+
     cout<< trie.starts_with("asdg") <<endl;
+    cout<< trie.starts_with("asdgh") <<endl;
+    cout<< trie.starts_with("asdgwxy") <<endl;
+    cout<< trie.starts_with("aswwww") <<endl;
+    cout<< trie.starts_with("abbbbb") <<endl;
 
     return 0;
 }
