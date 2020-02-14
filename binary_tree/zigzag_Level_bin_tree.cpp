@@ -11,23 +11,26 @@ using namespace std;
 //https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/solution/deque-c-by-he-le-le-le-la-e/
 #include "bin_tree.hpp"
 
-// ZigZag方式遍历二叉树，即：根->左子->右子->右子的左子->右子的右子->XXX
-/* 比如：  3
+// ZigZag方式遍历二叉树，蛇形遍历二叉树
+/* 比如：  1
           / \
-         9   1
-            / \
-           5   6
+         2   3
+        / \   \
+       4   5   6
+          / \
+         7   8
 返回：[
-        [3],
-        [1,9],
-        [5,6]
+        [1],
+        [2,3],
+        [4,5,6]
+        [7,8]
       ]
 */
 
 vector<vector<char>> zigzag_level_bin_tree(TreeNode* root) {
     vector<vector<char>> ret;
     deque<TreeNode*> deque;
-    bool to_right = true;
+    bool to_left = true;
 
     if (!root) {
         return ret;
@@ -39,31 +42,30 @@ vector<vector<char>> zigzag_level_bin_tree(TreeNode* root) {
         int n = deque.size();
         for (int i=0; i<n; ++i) {
             TreeNode* cur = NULL;
-            if (to_right) {
-                cur = deque.front();
-                deque.pop_front();
+            if (to_left) {
+                cur = deque.back(); deque.pop_back();
             }
             else {
-                cur = deque.back();
-                deque.pop_back();
+                cur = deque.front(); deque.pop_front();
             }
             ret[ret.size()-1].push_back(cur->data);
-            if (to_right) {
-                if (cur->left) deque.push_back(cur->left);
-                if (cur->right) deque.push_back(cur->right);
-            }
-            else {
+            if (to_left) {
                 if (cur->right) deque.push_front(cur->right);
                 if (cur->left) deque.push_front(cur->left);
             }
+            else {
+                if (cur->left) deque.push_back(cur->left);
+                if (cur->right) deque.push_back(cur->right);
+            }
         }
-        to_right = !to_right;
+        to_left = !to_left;
     }
     return ret;
 }
 
 int main() {
-    string seq = "39##15##6##";
+    string seq = "124##57##8##3#6##";
+    //string seq = "19##15##6##";
     int pos = 0;
     TreeNode *T = create_bin_tree(seq, pos);
 
