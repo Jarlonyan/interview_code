@@ -65,7 +65,7 @@ vector<vector<char>> zigzag_level_bin_tree(TreeNode* root) {
 
 int main() {
     //string seq = "124##57##8##3#6##";
-    string seq = "19##35##6##";
+    string seq = "19##15##6##";
     int pos = 0;
     TreeNode *T = create_bin_tree(seq, pos);
 
