@@ -7,17 +7,16 @@ using namespace std;
 vector<vector<int>> three_sum(vector<int>& s) {
     vector<vector<int>> ret;
     int n = s.size();
-    int last = n-1;
 
     sort(s.begin(), s.end());
     for(int i=0; i<n-2; ++i) {
-        int j=i+1, k=last-1;
+        int j=i+1, k=n-1;
         while(j<k) {
             if(s[i]+s[j]+s[k] < 0) {
                 ++j;
                 while(s[j]==s[j-1] && j<k) ++j;
             }
-            else if(s[i]+s[j]+s[k] < 0) {
+            else if(s[i]+s[j]+s[k] > 0) {
                 --k;
                 while(s[k]==s[k+1] && j<k) --k;
             }
