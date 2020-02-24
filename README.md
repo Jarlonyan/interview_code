@@ -45,30 +45,31 @@
 
 # 2. 中级代码 
 
-## 2.1. dynamic_programming
+## 2.1. leetcode
+
++ leetcode上的题目
+
+| 题目 | 链接 | |
+| -- | -- | -- |
+| 删除排序数组重复元素 | [remove_duplicates](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/remove_duplicate_sorted_array.cpp) | easy |
+| 打印全排列 | [permulation](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/permutation.cpp) | easy |
+| 打印所有子集 | [subset](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/subset.cpp) | easy |
+| 3sum问题 | [3sum](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/3sum.cpp) | easy |
+| 二叉树z字形层次遍历）LeetCode#103 | [bin_tree_zigzag_Level](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/bin_tree_zigzag_Level.cpp) | middle |
+|  | [xxxxxx](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/) | |
+
+## 2.2. dynamic_programming
 
 + 动态规划
 
 | 题目 | 链接 | 难度 | 
 | -- | -- | -- |
-| 打印全排列 | [permulation](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/permutation.cpp) | |
-| 打印所有子集 | [subset](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/subset.cpp) | |
-| 3sum问题 | [3sum](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/3sum.cpp) | |
 | 青蛙吃虫子 | [frog_eat_bug](https://github.com/Jarlonyan/interview_code/blob/master/dynamic_programming/frog_eat_bug.cpp) | middle |
 | 最长斐波拉契序列 | [longest_fibonacci_seq](https://github.com/Jarlonyan/interview_code/blob/master/dynamic_programming/longest_fibonacci_seq.cpp) | middle |
 | 二维数组，左上角都到右下角的走法 | [left_up_2_right_down](https://github.com/Jarlonyan/interview_code/blob/master/dynamic_programming/left_up_2_right_down.cpp) | |
 | xxxx | [xxxx](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/) | |
 
 
-## 2.2. leetcode
-
-+ leetcode上的题目
-
-| 题目 | 链接 |
-| -- | -- |
-| 删除排序数组重复元素 | [remove_duplicates](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/remove_duplicate_sorted_array.cpp) |
-| 二叉树z字形层次遍历）LeetCode#103 | [bin_tree_zigzag_Level](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/bin_tree_zigzag_Level.cpp) |
-|  | [xxxxxx](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/) |
 
 # 3. 公司面试题
 
