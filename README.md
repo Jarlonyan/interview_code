@@ -51,10 +51,12 @@
 
 | 题目 | 链接 | 难度 | 
 | -- | -- | -- |
+| 打印全排列 | [xxxx](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/permutation.cpp) | |
+| 打印所有子集 | [xxxx](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/subset.cpp) | |
+| 3sum问题 | [xxxx](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/3sum.cpp) | |
 | 青蛙吃虫子 | [frog_eat_bug](https://github.com/Jarlonyan/interview_code/blob/master/dynamic_programming/frog_eat_bug.cpp) | middle |
 | 最长斐波拉契序列 | [longest_fibonacci_seq](https://github.com/Jarlonyan/interview_code/blob/master/dynamic_programming/longest_fibonacci_seq.cpp) | middle |
 | 二维数组，左上角都到右下角的走法 | [left_up_2_right_down](https://github.com/Jarlonyan/interview_code/blob/master/dynamic_programming/left_up_2_right_down.cpp) | |
-| xxxx | [xxxx](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/) | |
 | xxxx | [xxxx](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/) | |
 
 
