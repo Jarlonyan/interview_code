@@ -4,8 +4,15 @@
 #include <algorithm>
 using namespace std;
 
-void permutation(vector<int> a) {
-    
+vector<vector<int>> permutation(vector<int> a) {
+    vector<vector<int>> ret;
+    int n = a.size();
+    for(int i=0; i<n; ++i) {
+        swap(a[i], a[j]);
+
+    }
+
+    return ret;
 }
 
 int  main() {
