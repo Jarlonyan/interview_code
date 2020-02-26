@@ -45,9 +45,9 @@
 
 |题目| 链接 |
 |--|--|
-|  跳表 | [bin_tree](https://github.com/Jarlonyan/interview_code/blob/master/advanced_data_structure/skip_list.cpp) |
-| 线段树 | [bin_tree](https://github.com/Jarlonyan/interview_code/blob/master/advanced_data_structure/region_tree.cpp) |
-| 字典树 | [bin_tree](https://github.com/Jarlonyan/interview_code/blob/master/advanced_data_structure/trie_tree.cpp) |
+|  跳表 skip_list | [ skip_list ](https://github.com/Jarlonyan/interview_code/blob/master/advanced_data_structure/skip_list.cpp) |
+| 线段树 region_tree | [ region_tree ](https://github.com/Jarlonyan/interview_code/blob/master/advanced_data_structure/region_tree.cpp) |
+| 字典树 trie_tree | [ trie_tree ](https://github.com/Jarlonyan/interview_code/blob/master/advanced_data_structure/trie_tree.cpp) |
 
 ---------------
 
