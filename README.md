@@ -62,8 +62,8 @@
 | 打印全排列 | [permulation](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/permutation.cpp) | easy |
 | 打印所有子集 | [subset](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/subset.cpp) | easy |
 | 3sum问题 | [3sum](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/3sum.cpp) | easy |
+| 一个数组a，判断是否存在i\<j\<k，满足a[i]\<a[j]\<a[k] | [triplet_sorted](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/triplet_sorted.cpp) | easy |
 | 二叉树z字形层次遍历）LeetCode#103 | [bin_tree_zigzag_Level](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/bin_tree_zigzag_Level.cpp) | middle |
-|  | [xxxxxx](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/) | |
 
 ## 2.2. dynamic_programming 动态规划
 
