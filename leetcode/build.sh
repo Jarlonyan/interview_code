@@ -5,9 +5,9 @@
 
 #g++ -std=c++11  -I./ remove_duplicate_sorted_array.cpp -o run
 
-g++ -std=c++11  -I./ 3sum.cpp -o run
+#g++ -std=c++11  -I./ 3sum.cpp -o run
 
-#g++ -std=c++11  -I./ permutation.cpp -o run
+g++ -std=c++11  -I ../common/ permutation.cpp -o run
 
 #g++ -std=c++11  -I./ subset.cpp -o run
 

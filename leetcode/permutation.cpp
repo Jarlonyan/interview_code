@@ -2,21 +2,24 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include "common.h"
 using namespace std;
 
-vector<vector<int>> permutation(vector<int> a) {
-    vector<vector<int>> ret;
-    int n = a.size();
-    for(int i=0; i<n; ++i) {
-        swap(a[i], a[j]);
-
+void permutation(vector<int>& a, int left, int right) {
+    if(left==right){
+        print_vec(a);
+        return;
     }
-
-    return ret;
+    for(int i=left; i<right; i++) {
+        swap(a[left], a[i]);
+        permutation(a, left+1, right);
+        swap(a[left], a[i]);
+    }
 }
 
 int  main() {
-    vector<int> a = {1, 2, 3, 4, 5, 6, 7, 8};
+    vector<int> a = {3, 4, 5, 6};
+    permutation(a, 0, a.size());
     return 0;
 }
 
