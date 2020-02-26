@@ -15,7 +15,7 @@ void subset(vector<int> a, vector<int> temp, int index) {
     subset(a, temp, index+1);
 }
 
-int  main() {
+int main() {
     vector<int> a = {3,4,5,6};
     vector<int> temp;
     int index = 0;

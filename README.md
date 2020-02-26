@@ -41,13 +41,20 @@
 | 二叉查找树 | [bin_search_tree](https://github.com/Jarlonyan/interview_code/blob/master/binary_tree/bin_search_tree.cpp) |
 
 
+## 1.4. 高级数据结构
+
+|题目| 链接 |
+|--|--|
+|  跳表 | [bin_tree](https://github.com/Jarlonyan/interview_code/blob/master/advanced_data_structure/skip_list.cpp) |
+| 线段树 | [bin_tree](https://github.com/Jarlonyan/interview_code/blob/master/advanced_data_structure/region_tree.cpp) |
+| 字典树 | [bin_tree](https://github.com/Jarlonyan/interview_code/blob/master/advanced_data_structure/trie_tree.cpp) |
+
 ---------------
 
 # 2. 中级代码 
 
 ## 2.1. leetcode
 
-+ leetcode上的题目
 
 | 题目 | 链接 | |
 | -- | -- | -- |
@@ -58,9 +65,7 @@
 | 二叉树z字形层次遍历）LeetCode#103 | [bin_tree_zigzag_Level](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/bin_tree_zigzag_Level.cpp) | middle |
 |  | [xxxxxx](https://github.com/Jarlonyan/interview_code/blob/master/leetcode/) | |
 
-## 2.2. dynamic_programming
-
-+ 动态规划
+## 2.2. dynamic_programming 动态规划
 
 | 题目 | 链接 | 难度 | 
 | -- | -- | -- |
