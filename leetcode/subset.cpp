@@ -2,24 +2,25 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include "common.h"
 using namespace std;
 
-vector<vector<int>> subset(vector<int> a) {
-    vector<vector<int>> ret;
-    
-    return ret;
+void subset(vector<int> a, vector<int> temp, int index) {
+    if (index>=a.size()) {
+        print_vec(temp);
+        return;
+    }
+    subset(a, temp, index+1);
+    temp.push_back(a[index]);
+    subset(a, temp, index+1);
 }
 
 int  main() {
-    vector<int> a = {1,2,3,4,5,6,7};
+    vector<int> a = {3,4,5,6};
+    vector<int> temp;
+    int index = 0;
 
-    auto ret = subset(a);
-    for(int i=0; i<ret.size(); ++i) {
-        for(int j=0; j<ret[i].size(); ++j) {
-            cout<< ret[i][j]<<", ";
-        }
-        cout<<endl;
-    }
+    subset(a, temp, index);
     return 0;
 }
 

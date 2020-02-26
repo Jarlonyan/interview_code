@@ -19,7 +19,8 @@ void permutation(vector<int>& a, int left, int right) {
 
 int  main() {
     vector<int> a = {3, 4, 5, 6};
-    permutation(a, 0, a.size());
+    int n = a.size();
+    permutation(a, 0, n);
     return 0;
 }
 
