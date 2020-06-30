@@ -1,50 +1,48 @@
-
-
 #include <iostream>
 #include<stack>
 #include<vector>
 
 using namespace std;
 
-
-int func() {
-    string str= "[[[,,],[,,]]]"; // (1,2,3)
-    //string str="[[[],[],[]],[[],[],[]]]"; // (2,3,1)
-    vector<int> res;
-    stack<int> nums;
-    stack<char> comma;
-    stack<pair<char,int>> bracket;
-    int t1;
-    for(int i=0; i<str.size(); i++) {
-        if(str[i] == '[') {
-            bracket.push(pair<char,int>(str[i],0));
-            t1 = comma.size();
+int tensor_shape(string s) {
+    int n = s.length();
+    char st[1000];
+    int top = -1;
+    int a[1000];
+    int b[1000];
+    int f = 0;
+    for(int i=0;i<=100;i++) a[i] = 0, b[i] = 0;
+    
+    for(int i=0; i<n; i++) {
+        if(s[i] == '[') {
+            st[++top] = s[i];
         }
-        else if(str[i] == ']') {
-            bracket.pop();
-            int dim = 1;
-            while(comma.size() > t1) {
-                dim++;
-                comma.pop();
-            }
-            t1 = 0;
-            res.push_back(dim);
-            nums.push(dim);
+        if(s[i]==']') {
+            b[top] = max(b[top], a[top] + 1);
+            a[top] = 0;
+            top--;
         }
-        else if(str[i] == ',') {
-            comma.push(str[i]);
+        if(s[i]==',') {
+            a[top]++;
         }
-
     }
-    for(int i=0; i<res.size(); i++) {
-        cout << res[i] << " ";
+    cout<<'(';
+    for(int i=0; i<100; i++) {
+        if(b[i]>0) {
+            if(i>0)cout<<",";
+            cout<<b[i];
+        }
+        else
+            break;
     }
-
-    return 0;
+    cout<<')';
 }
 
+
+
 int main() {
-    func();
+    //tensor_shape("[[[1,2,3],[4,5,6]]]");
+    tensor_shape("[[[1],[2],[3]],[[4],[5],[6]]]");
     return 0;
 }
 
