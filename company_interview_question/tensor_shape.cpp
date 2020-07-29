@@ -1,3 +1,12 @@
+/**
+TensorFlow中tensor的shape：以字符串形式给出多维数组，求其构造的tensor的shape。比如：a=tf.Variable([[[1,2,3],[4,5,6]]])中a.shape=(1, 2, 3) ，但是多维数组是以字符串形式给出。
+输入：字符串 "[[[1,2,3],[4,5,6]]]"
+输出：(1,2,3)。
+
+输入："[[[1],[2],[3]],[[4],[5],[6]]]"
+输出：(2,3,1)
+*/
+
 #include <iostream>
 #include<stack>
 #include<vector>
@@ -13,12 +22,12 @@ int tensor_shape(string s) {
         if(s[i] == '[') {
             top++;
         }
-        if(s[i]==']') {
+        if(s[i] == ']') {
             res[top] = max(res[top], temp[top] + 1);
             temp[top] = 0;
             top--;
         }
-        if(s[i]==',') {
+        if(s[i] == ',') {
             temp[top]++;
         }
     }
