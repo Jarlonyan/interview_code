@@ -45,9 +45,42 @@ int tensor_shape(string s) {
 }
 
 
+int get_shape(string str) {
+    if (str.size() == 0) return 0;
+    int  size = 0;
+    while (str[size] == '[') {
+        size++;
+    }
+
+    vector<int> res(size, 1);
+    int limit = size-1;
+
+    stack<char> s;
+    for (int i = 0; i < str.length(); i++) {
+        if (str[i] == '[') {
+            s.push('[');
+        } else if (str[i] == ']') {
+            s.pop();
+        } else if (str[i] == ',') {
+            int leftSize = s.size();
+            if (leftSize - 1 <= limit) {
+                res[leftSize - 1]++;
+                limit = leftSize - 1;
+            }
+        }
+    }
+
+    for (int i=0;  i<res.size(); ++i)
+        cout<<res[i]<<" ";
+    cout<<endl;
+}
+
+
 int main() {
-    tensor_shape("[[[1,2,3],[4,5,6]]]");
-    tensor_shape("[[[1],[2],[3]],[[4],[5],[6]]]");
+    //tensor_shape("[[[1,2,3],[4,5,6]]]");
+    //tensor_shape("[[[1],[2],[3]],[[4],[5],[6]]]");
+    get_shape("[[[1,2,3],[4,5,6]]]");
+    get_shape("[[[1],[2],[3]],[[4],[5],[6]]]");
     return 0;
 }
 
