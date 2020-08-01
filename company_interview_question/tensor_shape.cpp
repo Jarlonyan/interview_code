@@ -55,17 +55,17 @@ int get_shape(string str) {
     vector<int> res(size, 1);
     int limit = size-1;
 
-    stack<char> s;
-    for (int i = 0; i < str.length(); i++) {
+    stack<char> stack;
+    for (int i = 0; i < str.length(); ++i) {
         if (str[i] == '[') {
-            s.push('[');
+            stack.push('[');
         } else if (str[i] == ']') {
-            s.pop();
+            stack.pop();
         } else if (str[i] == ',') {
-            int leftSize = s.size();
-            if (leftSize - 1 <= limit) {
-                res[leftSize - 1]++;
-                limit = leftSize - 1;
+            int index = stack.size() - 1;
+            if (index <= limit) {
+                res[index]++;
+                limit = index;
             }
         }
     }
@@ -81,6 +81,7 @@ int main() {
     //tensor_shape("[[[1],[2],[3]],[[4],[5],[6]]]");
     get_shape("[[[1,2,3],[4,5,6]]]");
     get_shape("[[[1],[2],[3]],[[4],[5],[6]]]");
+    get_shape("[[[1,2,3]],[[4,5,6]]]");
     return 0;
 }
 
