@@ -70,18 +70,46 @@ int get_shape(string str) {
         }
     }
 
-    for (int i=0;  i<res.size(); ++i)
-        cout<<res[i]<<" ";
-    cout<<endl;
+    cout<<str<<"=(";
+    for (int i=0;  i<res.size()-1; ++i)
+        cout<<res[i]<<",";
+    cout<<res[res.size()-1]<<")"<<endl;
 }
 
+int get_shape2(string str) {
+    if (str.size() == 0) return 0;
+    int  size = 0;
+    while (str[size] == '[') {
+        size++;
+    }
+    vector<int> res(size, 1);
+    stack<char> stk;
+
+    for(int i=0; i<str.length(); ++i) {
+        if(str[i] == '[') {
+            stk.push('[');
+            res[stk.size() - 1] = 1;
+        }
+        else if(str[i] == ',') {
+            res[stk.size() - 1] += 1;
+        }
+        else if(str[i] == ']') {
+            stk.pop();
+        }
+    }
+
+    cout<<str<<"=(";
+    for (int i=0;  i<res.size()-1; ++i)
+        cout<<res[i]<<",";
+    cout<<res[res.size()-1]<<")"<<endl;
+}
 
 int main() {
     //tensor_shape("[[[1,2,3],[4,5,6]]]");
     //tensor_shape("[[[1],[2],[3]],[[4],[5],[6]]]");
-    get_shape("[[[1,2,3],[4,5,6]]]");
-    get_shape("[[[1],[2],[3]],[[4],[5],[6]]]");
-    get_shape("[[[1,2,3]],[[4,5,6]]]");
+    get_shape2("[[[0.7,7,7],[4,5,6]]]");
+    get_shape2("[[[0.7],[0.7],[3]],[[4],[5],[6]]]");
+    //get_shape("[[[1,2,3]],[[4,5,6]]]");
     return 0;
 }
 
