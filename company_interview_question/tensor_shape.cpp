@@ -82,7 +82,7 @@ int get_shape2(string str) {
     while (str[size] == '[') {
         size++;
     }
-    vector<int> res(size, 1);
+    vector<int> res(size);
     stack<char> stk;
 
     for(int i=0; i<str.length(); ++i) {
@@ -107,7 +107,7 @@ int get_shape2(string str) {
 int main() {
     //tensor_shape("[[[1,2,3],[4,5,6]]]");
     //tensor_shape("[[[1],[2],[3]],[[4],[5],[6]]]");
-    get_shape2("[[[0.7,7,7],[4,5,6]]]");
+    get_shape2("[[[0.7, 7, 7],[ 4, 5, 6]]]");
     get_shape2("[[[0.7],[0.7],[3]],[[4],[5],[6]]]");
     //get_shape("[[[1,2,3]],[[4,5,6]]]");
     return 0;
